@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的作品集</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        html, body {
+            height: 100%;
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+        }
+        main {
+            flex: 1;
+        }
+        footer {
+            padding: 20px;
+            background-color: #1f8383;
+            text-align: center;
+        }
+        /* 自定義輪播文字樣式 */
+        .carousel-caption h5 {
+            font-size: 2rem;
+            font-weight: bold;
+        }
+        .carousel-caption p {
+            font-size: 1.2rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 導航欄 -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">我的作品集</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="切換導航">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">關於我</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#portfolio">作品集</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+ <!-- 首頁輪播圖片及文字 -->
+<main>
+    <style>
+        .carousel-caption {
+            color: #d4d230; /* 設置文字顏色為黑色 */
+        }
+    </style>
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <!-- 第一組圖片與文字 -->
+            <div class="carousel-item active">
+                <img src="11.png" class="d-block w-100" alt="第一張圖片">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>我是陳仕育</h5>
+                    <p>這是一隻嘻嘻海豹。</p>
+                </div>
+            </div>
+            <!-- 第二組圖片與文字 -->
+            <div class="carousel-item">
+                <img src="13.png" class="d-block w-100" alt="第二張圖片">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>我是專注於前端技術的網頁開發者</h5>
+                    <p>生活就是這樣</p>
+                </div>
+            </div>
+            <!-- 第三組圖片與文字 -->
+            <div class="carousel-item">
+                <img src="15.png" class="d-block w-100" alt="第三張圖片">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>有空可以來看我的作品</h5>
+                    <p>發現火的當下</p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">上一張</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">下一張</span>
+        </button>
+    </div>
+</main>
+<!-- 輪播自動開始 -->
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var carousel = new bootstrap.Carousel(document.getElementById('carouselExampleCaptions'), {
+            interval: 3000,  // 設定自動切換的時間間隔
+            ride: 'carousel'  // 啟動自動播放
+        });
+        // 手動觸發第一次輪播
+        setTimeout(() => {
+            carousel.next();
+        }, 1); // 在頁面加載後立即切換到下一張
+    });
+</script>
+
+
+        <!-- 你的內容，例如關於我、作品集等等，放在這個區塊中 -->
+        <section id="about" class="py-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h2>關於我</h2>
+                        <p>您好！我是陳仕育，我熱愛打遊戲和追星的網頁開發者。在遊戲中，我喜歡挑戰不同的遊戲類型，享受解謎和競技帶來的成就感；同時，追星是我生活中的另一大樂趣，我常關注喜歡的明星動態，並參與相關活動。我對前端技術充滿熱情，喜歡創建美觀且實用的網站，希望透過我的作品，帶給大家愉快的使用體驗。</p>
+                    </div>
+                    <div class="col-md-6">
+                        <img src="19.png" alt="我的照片" class="img-fluid rounded">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 作品集 -->
+        <section id="portfolio" class="py-5 bg-light">
+            <div class="container">
+                <h2 class="text-center">作品集</h2>
+                <div class="row">
+                    <div class="col-md-4 portfolio-item">
+                        <a href="https://chennyuouo.github.io/0918-50915118/" target="_blank">
+                            <img src="7.png" alt="作品1" class="img-fluid">
+                        </a>
+                        <h3>剪刀石頭布遊戲</h3>
+                        <p>0918作業
+                        與電腦進行剪刀石頭布，先贏得三局獲勝
+                        </p>
+                    </div>
+                    <div class="col-md-4 portfolio-item">
+                        <a href="https://chennyuouo.github.io/1009-50915118/" target="_blank">
+                            <img src="5.png" alt="作品2" class="img-fluid">
+                        </a>
+                        <h3>記憶力大考驗</h3>
+                        <p>1009作業
+                            翻開一樣的卡牌來進行配對
+                        </p>
+                    </div>
+                    <!-- 新增的兩個區塊 -->
+                    <div class="col-md-4 portfolio-item">
+                        <a href="https://chennyuouo.github.io/1023-50915118/" target="_blank">
+                            <img src="8.png" alt="作品4" class="img-fluid">
+                        </a>
+                        <h3>打磚塊</h3>
+                        <p>1023 作業
+                            打磚塊小遊戲
+                        </p>
+                    </div>
+                    <div class="col-md-4 portfolio-item">
+                        <a href="https://chennyuouo.github.io/1030-50915118/" target="_blank">
+                            <img src="6.png" alt="作品5" class="img-fluid">
+                        </a>
+                        <h3>JS套件介紹</h3>
+                        <p>1030 作業
+                            介紹實用的JavaScript套件
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- 影片集 -->
+        <section class="py-5">
+            <div class="container-fluid px-0">
+                <h2 class="text-center">我的影片</h2>
+                <div class="row gx-0">
+                    <div class="col-12 mb-4">
+                        <div class="ratio ratio-16x9">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/EmrKDe0eYbk?si=zpsxn0vs2uvreHbU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 ChennYu的網頁 | 聯絡我們: <a href="mailto:50915118@gmm.nfu.edu.tw">50915118@gm.nfu.edu.tw</p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
